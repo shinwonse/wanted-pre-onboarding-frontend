@@ -38,5 +38,12 @@
 				"newlines-between": "always"
 			}
 		]
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx"]
+			}
+		}
 	}
 }
