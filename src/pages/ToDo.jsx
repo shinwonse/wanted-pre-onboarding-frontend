@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ToDo() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.getItem('token') || navigate('/');
+  }, []);
   return (
     <main className="ToDoMain">
       <h1 className="ToDo__title">TODO LIST</h1>
