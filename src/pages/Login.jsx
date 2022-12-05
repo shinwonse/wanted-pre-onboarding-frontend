@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { BASE_URL } from '../constants';
@@ -49,6 +49,10 @@ function Login() {
     e.preventDefault();
     navigate('/signup');
   };
+
+  useEffect(() => {
+    localStorage.getItem('token') && navigate('/todo');
+  }, []);
 
   return (
     <main className="LoginMain">
