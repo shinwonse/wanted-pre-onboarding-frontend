@@ -1,9 +1,14 @@
+import axios from 'axios';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+import { BASE_URL } from '../constants';
 import { emailValidation } from '../validations/emailValidation';
 import { passwordValidation } from '../validations/passwordValidation';
 
 function SignUp() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(true);
 
@@ -30,6 +35,15 @@ function SignUp() {
     setPassword(target.value);
   };
 
+  const signUp = async (e) => {
+    e.preventDefault();
+    await axios.post(`${BASE_URL}/auth/signup`, {
+      email: email,
+      password: password,
+    });
+    navigate('/');
+  };
+
   return (
     <main className="SignupMain">
       <h1 className="Signup__Title">JOIN</h1>
@@ -40,6 +54,7 @@ function SignUp() {
             className="SignupInput__element"
             type="email"
             id="email"
+            placeholder="example@ex.com"
             value={email}
             onChange={handleEmailInput}
           />
@@ -50,6 +65,7 @@ function SignUp() {
             className="SignupInput__element"
             type="password"
             id="password"
+            placeholder="password must be 8 characters or more"
             value={password}
             onChange={handlePasswordInput}
           />
@@ -58,6 +74,7 @@ function SignUp() {
           <button
             className="Signup__button"
             disabled={emailError || passwordError}
+            onClick={signUp}
           >
             JOIN
           </button>

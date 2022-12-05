@@ -1,6 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
+
+  const navigateToJoin = (e) => {
+    e.preventDefault();
+    navigate('/signup');
+  };
+
   return (
     <main className="LoginMain">
       <div className="Title">
@@ -17,7 +25,9 @@ function Login() {
         </div>
         <div className="Button__Wrapper">
           <button className="Button">LOGIN</button>
-          <button className="Button">CREATE ACCOUNT</button>
+          <button className="Button" onClick={navigateToJoin}>
+            CREATE ACCOUNT
+          </button>
         </div>
       </form>
     </main>
