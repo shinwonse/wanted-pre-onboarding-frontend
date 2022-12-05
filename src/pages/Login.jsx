@@ -41,7 +41,7 @@ function Login() {
       email,
       password,
     });
-    console.log(data);
+    localStorage.setItem('token', data.access_token);
     navigate('/todo');
   };
 
