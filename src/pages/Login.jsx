@@ -86,7 +86,11 @@ function Login() {
           <button className="Button" onClick={login}>
             LOGIN
           </button>
-          <button className="Button" onClick={navigateToJoin}>
+          <button
+            className="Button"
+            disabled={!emailError || !passwordError}
+            onClick={navigateToJoin}
+          >
             CREATE ACCOUNT
           </button>
         </div>
