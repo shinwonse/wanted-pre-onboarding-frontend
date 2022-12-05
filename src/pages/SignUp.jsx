@@ -54,6 +54,7 @@ function SignUp() {
             className="SignupInput__element"
             type="email"
             id="email"
+            placeholder="example@ex.com"
             value={email}
             onChange={handleEmailInput}
           />
@@ -64,6 +65,7 @@ function SignUp() {
             className="SignupInput__element"
             type="password"
             id="password"
+            placeholder="password must be 8 characters or more"
             value={password}
             onChange={handlePasswordInput}
           />
