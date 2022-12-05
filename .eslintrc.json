@@ -20,6 +20,7 @@
 		"react"
 	],
 	"rules": {
+		"no-unused-vars": "off",
 		"import/order": [
 			"error",
 			{
