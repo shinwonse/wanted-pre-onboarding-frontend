@@ -1,0 +1,49 @@
+.SignupMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.Signup__Title {
+  height: 200px;
+  font-size: 24px;
+}
+
+.SignupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 300px;
+}
+
+.SignupInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.SignupInput__element {
+  padding: 3px;
+  border-bottom: 1px solid black;
+}
+
+.Signup__button {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.Signup__button__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  margin-top: 50px;
+}
