@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 
 import { emailValidation } from '../validations/emailValidation';
+import { passwordValidation } from '../validations/passwordValidation';
 
 function SignUp() {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(true);
+
+  const [password, setPassword] = useState('');
+  const [passwordError, setPasswordError] = useState(true);
 
   const handleEmailInput = ({ target }) => {
     if (emailValidation(target.value)) {
@@ -14,6 +18,16 @@ function SignUp() {
     }
     setEmailError(true);
     setEmail(target.value);
+  };
+
+  const handlePasswordInput = ({ target }) => {
+    if (passwordValidation(target.value)) {
+      setPasswordError(false);
+      setPassword(target.value);
+      return;
+    }
+    setPasswordError(true);
+    setPassword(target.value);
   };
 
   return (
@@ -36,10 +50,17 @@ function SignUp() {
             className="SignupInput__element"
             type="password"
             id="password"
+            value={password}
+            onChange={handlePasswordInput}
           />
         </div>
         <div className="Signup__button__wrapper">
-          <button className="Signup__button">JOIN</button>
+          <button
+            className="Signup__button"
+            disabled={emailError || passwordError}
+          >
+            JOIN
+          </button>
         </div>
       </form>
     </main>
