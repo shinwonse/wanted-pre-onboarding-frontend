@@ -1,0 +1,49 @@
+.LoginMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.Title {
+  height: 200px;
+  font-size: 24px;
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 300px;
+}
+
+.Input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.Input__element {
+  padding: 3px;
+  background: #e8f0fe;
+}
+
+.Button__Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  margin-top: 30px;
+}
+
+.Button {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
