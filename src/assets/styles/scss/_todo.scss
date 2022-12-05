@@ -1,0 +1,48 @@
+.ToDoMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.ToDo__title {
+  font-size: 30px;
+}
+
+.ToDo__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.ToDo__Form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.ToDo__Form-input {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.ToDo__Form-button{
+}
+
+.ToDo__list {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 500px;
+  margin-top: 30px;
+}
+
+.ToDo__list-item {
+  width: 100%;
+  height: 30px;
+}

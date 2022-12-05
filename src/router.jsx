@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import ToDos from './pages/ToDos';
+import ToDo from './pages/ToDo';
 import Root from './Root';
 
 const router = createBrowserRouter([
@@ -20,8 +20,8 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: 'todos',
-        element: <ToDos />,
+        path: 'todo',
+        element: <ToDo />,
       },
     ],
   },
