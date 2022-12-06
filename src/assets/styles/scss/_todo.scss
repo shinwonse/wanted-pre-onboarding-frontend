@@ -66,6 +66,7 @@
 
 .ToDo__List-item-checkbox:checked {
   background-color: black;
+  + h3 {text-decoration: line-through;}
 }
 
 .ToDo__list-item--updating {
