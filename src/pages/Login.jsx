@@ -49,10 +49,7 @@ function Login() {
     }
   };
 
-  const navigateToJoin = (e) => {
-    e.preventDefault();
-    navigate('/signup');
-  };
+  const navigateToJoin = (e) => navigate('/signup');
 
   useEffect(() => {
     localStorage.getItem('token') && navigate('/todo');
@@ -65,7 +62,9 @@ function Login() {
       </div>
       <form className="LoginForm">
         <div className="Input">
-          <label htmlFor="email">EMAIL</label>
+          <label className="Input__label" htmlFor="email">
+            EMAIL
+          </label>
           <input
             className="Input__element"
             type="email"
@@ -76,7 +75,9 @@ function Login() {
           />
         </div>
         <div className="Input">
-          <label htmlFor="password">PASSWORD</label>
+          <label className="Input__label" htmlFor="password">
+            PASSWORD
+          </label>
           <input
             className="Input__element"
             type="password"
