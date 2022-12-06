@@ -37,12 +37,16 @@ function Login() {
 
   const login = async (e) => {
     e.preventDefault();
-    const { data } = await axios.post(`${BASE_URL}/auth/signin`, {
-      email,
-      password,
-    });
-    localStorage.setItem('token', data.access_token);
-    navigate('/todo');
+    try {
+      const { data } = await axios.post(`${BASE_URL}/auth/signin`, {
+        email,
+        password,
+      });
+      localStorage.setItem('token', data.access_token);
+      navigate('/todo');
+    } catch (error) {
+      alert('Check your email or password');
+    }
   };
 
   const navigateToJoin = (e) => {

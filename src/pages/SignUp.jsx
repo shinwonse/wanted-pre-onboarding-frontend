@@ -37,11 +37,15 @@ function SignUp() {
 
   const signUp = async (e) => {
     e.preventDefault();
-    await axios.post(`${BASE_URL}/auth/signup`, {
-      email: email,
-      password: password,
-    });
-    navigate('/');
+    try {
+      await axios.post(`${BASE_URL}/auth/signup`, {
+        email: email,
+        password: password,
+      });
+      navigate('/');
+    } catch (error) {
+      alert('Already registered Email');
+    }
   };
 
   return (
