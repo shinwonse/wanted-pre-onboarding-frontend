@@ -30,6 +30,9 @@ $ npm start
 - `signup` : 회원가입 기능 구현 브랜치
 
 ## Lint
+
+<img width="400" alt="스크린샷 2022-12-07 오전 12 58 09" src="https://user-images.githubusercontent.com/62709718/205963759-42df007d-2439-41e0-8f40-d732b42af090.png">
+
 `ESLint`를 사용하여 코드 스타일을 통일하였습니다. 이때 다음과 같은 플러그인을 사용하였습니다.
 - `eslint-plugin-react`
 - `eslint-plugin-prettier`
@@ -38,3 +41,9 @@ $ npm start
 1인 프로젝트이지만 `eslint-plugin-import`를 통해 `import` 순서를 통일하여 가독성을 높였습니다. 
 
 ## 주요 기능
+
+<img width="400" alt="스크린샷 2022-12-07 오전 1 12 50" src="https://user-images.githubusercontent.com/62709718/205964077-51984509-a6f4-4173-823a-3d6b6f83cf5b.png">
+
+<img width="400" alt="스크린샷 2022-12-07 오전 1 13 36" src="https://user-images.githubusercontent.com/62709718/205964262-e39e10e7-65fa-4811-a363-05c5f9b0f3ab.png">
+
+<img width="400" alt="스크린샷 2022-12-07 오전 1 14 05" src="https://user-images.githubusercontent.com/62709718/205964354-1d681b84-84e5-4846-8831-6dab8c42c5c0.png">
