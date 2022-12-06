@@ -4,6 +4,9 @@
 ## 배포 링크
 🔗 [WANTED TODOLIST](https://wanted-pre-onboarding-frontend-shinwonse.vercel.app)
 
+
+<img width="400" alt="스크린샷 2022-12-07 오전 12 58 09" src="https://user-images.githubusercontent.com/62709718/205960906-54fca84f-d57f-4e23-b8a2-1acef5be219c.png">
+
 `vercel cli`를 사용하여 배포하였습니다.
 
 ## 실행 방법
@@ -16,6 +19,8 @@ $ npm start
 <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=React Router&logoColor=white"> <img src="https://img.shields.io/badge/SASS-cc6699.svg?&style=for-the-badge&logo=Sass&logoColor=White">
 
 ## 브랜치 전략
+
+<img width="400" alt="스크린샷 2022-12-07 오전 12 58 09" src="https://user-images.githubusercontent.com/62709718/205960697-75f3f884-61db-429e-9f6e-b17646ffd21f.png">
 
 - `main` : 배포용 브랜치
 - `routing` : 라우팅 기능 구현 브랜치
