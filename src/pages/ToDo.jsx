@@ -40,6 +40,11 @@ function ToDo() {
     fetchToDos();
   };
 
+  const logout = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
+
   useEffect(() => {
     localStorage.getItem('token') || navigate('/');
     fetchToDos();
@@ -74,6 +79,9 @@ function ToDo() {
           })}
         </ul>
       </div>
+      <button className="Logout__button" onClick={logout}>
+        LOGOUT
+      </button>
     </main>
   );
 }
