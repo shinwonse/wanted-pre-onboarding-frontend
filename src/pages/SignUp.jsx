@@ -53,7 +53,9 @@ function SignUp() {
       <h1 className="Signup__Title">SIGN UP</h1>
       <form className="SignupForm">
         <div className="SignupInput">
-          <label htmlFor="email">EMAIL</label>
+          <label className="Signup__form-label" htmlFor="email">
+            EMAIL
+          </label>
           <input
             className="SignupInput__element"
             type="email"
@@ -64,7 +66,9 @@ function SignUp() {
           />
         </div>
         <div className="SignupInput">
-          <label htmlFor="password">PASSWORD</label>
+          <label className="Signup__form-label" htmlFor="password">
+            PASSWORD
+          </label>
           <input
             className="SignupInput__element"
             type="password"
