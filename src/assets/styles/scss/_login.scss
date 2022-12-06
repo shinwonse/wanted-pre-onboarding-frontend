@@ -10,6 +10,8 @@
 .Title {
   height: 200px;
   font-size: 24px;
+  font-family: 'Gelasio', serif;
+  font-weight: 700;
 }
 
 .LoginForm {
@@ -27,8 +29,12 @@
   height: 50px;
 }
 
+.Input__label {
+  font-family: 'Gelasio', serif;
+}
+
 .Input__element {
-  padding: 3px;
+  padding: 5px 0 5px 10px;
   background: #e8f0fe;
 }
 
@@ -42,8 +48,14 @@
 }
 
 .Button {
+  font-family: 'Gelasio', serif;
   width: 200px;
   padding: 5px;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
+  &:hover {
+    background: black;
+    color: white;
+    cursor: grab;
+  }
 }
