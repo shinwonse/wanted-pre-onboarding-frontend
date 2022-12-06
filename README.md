@@ -16,7 +16,8 @@ $ npm start
 ```
 
 ## 기술 스택
-<img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=React Router&logoColor=white"> <img src="https://img.shields.io/badge/SASS-cc6699.svg?&style=for-the-badge&logo=Sass&logoColor=White">
+<img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=React Router&logoColor=white"> <img src="https://img.shields.io/badge/SASS-cc6699.svg?&style=for-the-badge&logo=Sass&logoColor=White"> <img src="https://img.shields.io/badge/axios-navy.svg?&style=for-the-badge&logo=Axios&logoColor=White">
+
 
 ## 브랜치 전략
 
@@ -27,3 +28,13 @@ $ npm start
 - `login` : 로그인 기능 구현 브랜치
 - `todo` : 투두 리스트 기능 구현 브랜치
 - `signup` : 회원가입 기능 구현 브랜치
+
+## Lint
+`ESLint`를 사용하여 코드 스타일을 통일하였습니다. 이때 다음과 같은 플러그인을 사용하였습니다.
+- `eslint-plugin-react`
+- `eslint-plugin-prettier`
+- `eslint-plugin-import`
+
+1인 프로젝트이지만 `eslint-plugin-import`를 통해 `import` 순서를 통일하여 가독성을 높였습니다. 
+
+## 주요 기능
