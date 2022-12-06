@@ -46,7 +46,7 @@ function SignUp() {
 
   return (
     <main className="SignupMain">
-      <h1 className="Signup__Title">JOIN</h1>
+      <h1 className="Signup__Title">SIGN UP</h1>
       <form className="SignupForm">
         <div className="SignupInput">
           <label htmlFor="email">EMAIL</label>
@@ -76,7 +76,7 @@ function SignUp() {
             disabled={emailError || passwordError}
             onClick={signUp}
           >
-            JOIN
+            SIGN UP
           </button>
         </div>
       </form>
