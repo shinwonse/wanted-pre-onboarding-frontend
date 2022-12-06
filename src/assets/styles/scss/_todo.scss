@@ -51,6 +51,23 @@
   height: 30px;
 }
 
+.ToDo__list-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ToDo__List-item-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  margin-right: 5px;
+}
+
+.ToDo__List-item-checkbox:checked {
+  background-color: black;
+}
+
 .ToDo__list-item--updating {
   display: flex;
   flex-direction: row;
@@ -61,3 +78,4 @@
   width: 80%;
   background: #e8f0fe;
 }
+
