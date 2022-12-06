@@ -43,6 +43,40 @@
 }
 
 .ToDo__list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 30px;
 }
+
+.ToDo__list-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ToDo__List-item-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  margin-right: 5px;
+}
+
+.ToDo__List-item-checkbox:checked {
+  background-color: black;
+  + h3 {text-decoration: line-through;}
+}
+
+.ToDo__list-item--updating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ToDo__list-item--updating-input {
+  width: 80%;
+  background: #e8f0fe;
+}
+
