@@ -7,7 +7,9 @@
 }
 
 .ToDo__title {
-  font-size: 30px;
+  font-size: 24px;
+  font-family: 'Gelasio', serif;
+  font-weight: 700;
 }
 
 .ToDo__wrapper {
@@ -58,14 +60,19 @@
   align-items: center;
 }
 
-.ToDo__List-item-checkbox {
+.ToDo__list-item-checkbox {
   width: 20px;
   height: 20px;
   border: 1px solid black;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
-.ToDo__List-item-checkbox:checked {
+.ToDo__list-item-title {
+  font-family: 'Gelasio', serif;
+  font-weight: 700;
+}
+
+.ToDo__list-item-checkbox:checked {
   background-color: black;
   + h3 {text-decoration: line-through;}
 }
@@ -102,5 +109,10 @@
   border: 1px solid black;
   border-radius: 20px;
   padding: 5px;
+  font-family: 'Gelasio', serif;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 }
 

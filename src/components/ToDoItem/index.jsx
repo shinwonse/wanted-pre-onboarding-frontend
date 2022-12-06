@@ -51,12 +51,12 @@ function ToDoItem({ toDo, deleteToDo, updateToDo }) {
         <li className="ToDo__list-item">
           <div className="ToDo__list-item-wrapper">
             <input
-              className="ToDo__List-item-checkbox"
+              className="ToDo__list-item-checkbox"
               type="checkbox"
               checked={isCompleted}
               onChange={checkToDo}
             />
-            <h3>{toDo.todo}</h3>
+            <h3 className="ToDo__list-item-title">{toDo.todo}</h3>
           </div>
           <div className="ToDo__list-button-wrapper">
             <button onClick={startEdit}>
