@@ -12,13 +12,16 @@ function ToDoItem({ toDo, deleteToDo, updateToDo }) {
 
   const checkToDo = () => {
     setIsCompleted(!isCompleted);
-    submitUpdated();
+    updateToDo(toDo.id, {
+      todo: updatedToDo,
+      isCompleted: !isCompleted,
+    });
   };
 
   const submitUpdated = () => {
     updateToDo(toDo.id, {
       todo: updatedToDo,
-      isCompleted: !isCompleted,
+      isCompleted,
     });
     stopEdit();
   };
