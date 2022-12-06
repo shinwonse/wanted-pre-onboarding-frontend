@@ -1,35 +1,46 @@
-import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 
-import { BASE_URL } from '../../constants';
+function ToDoItem({ toDo, deleteToDo, updateToDo }) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [updatedToDo, setUpdatedToDo] = useState(toDo.todo);
 
-function ToDoItem(toDo) {
-  const setUpdateUI = (e) => {
-    e.preventDefault();
-  };
+  const startEdit = () => setIsEditing(true);
+  const stopEdit = () => setIsEditing(false);
 
-  const headers = {
-    Authorization: `Bearer ${localStorage.getItem('token')}`,
-  };
+  const handleUpdatedToDoInput = ({ target }) => setUpdatedToDo(target.value);
 
-  const updateToDo = (e) => {
-    e.preventDefault();
-  };
-
-  const deleteToDo = async (e) => {
-    e.preventDefault();
-    await axios.delete(`${BASE_URL}/todos/${toDo.toDo.id}`, { headers });
+  const submitUpdated = () => {
+    updateToDo(toDo.id, {
+      todo: updatedToDo,
+      isCompleted: toDo.isCompleted,
+    });
+    stopEdit();
   };
 
   return (
     <>
-      <li className="ToDo__list-item">
-        테스트중
-        <div>
-          <button onClick={setUpdateUI}>@</button>
-          <button onClick={deleteToDo}>X</button>
+      {isEditing ? (
+        <div className="ToDo__list-item--updating">
+          <input
+            className="ToDo__list-item--updating-input"
+            type="text"
+            value={updatedToDo}
+            onChange={handleUpdatedToDoInput}
+          />
+          <div>
+            <button onClick={submitUpdated}>제출</button>
+            <button onClick={stopEdit}>취소</button>
+          </div>
         </div>
-      </li>
+      ) : (
+        <li className="ToDo__list-item">
+          {toDo.todo}
+          <div>
+            <button onClick={startEdit}>@</button>
+            <button onClick={() => deleteToDo(toDo.id)}>X</button>
+          </div>
+        </li>
+      )}
     </>
   );
 }
