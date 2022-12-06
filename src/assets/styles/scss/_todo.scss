@@ -43,6 +43,21 @@
 }
 
 .ToDo__list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 30px;
+}
+
+.ToDo__list-item--updating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ToDo__list-item--updating-input {
+  width: 80%;
+  background: #e8f0fe;
 }
