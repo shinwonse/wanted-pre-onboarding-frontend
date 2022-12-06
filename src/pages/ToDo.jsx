@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { Plus } from '../assets/svg';
 import ToDoItem from '../components/ToDoItem';
 import { BASE_URL } from '../constants';
 
@@ -57,7 +58,7 @@ function ToDo() {
             onChange={handleNewToDoInput}
           />
           <button className="ToDo__Form-button" onClick={addToDo}>
-            +
+            <Plus width={20} />
           </button>
         </form>
         <ul className="ToDo__list">
