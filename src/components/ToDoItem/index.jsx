@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Back, Complete, Delete, Edit } from '../../assets/svg';
+
 function ToDoItem({ toDo, deleteToDo, updateToDo }) {
   const [isEditing, setIsEditing] = useState(false);
   const [isCompleted, setIsCompleted] = useState(toDo.isCompleted);
@@ -36,9 +38,13 @@ function ToDoItem({ toDo, deleteToDo, updateToDo }) {
             value={updatedToDo}
             onChange={handleUpdatedToDoInput}
           />
-          <div>
-            <button onClick={submitUpdated}>제출</button>
-            <button onClick={stopEdit}>취소</button>
+          <div className="ToDo__list-item--updating-button">
+            <button onClick={submitUpdated}>
+              <Complete width={20} height={20} />
+            </button>
+            <button onClick={stopEdit}>
+              <Back width={20} height={20} />
+            </button>
           </div>
         </div>
       ) : (
@@ -52,9 +58,13 @@ function ToDoItem({ toDo, deleteToDo, updateToDo }) {
             />
             <h3>{toDo.todo}</h3>
           </div>
-          <div>
-            <button onClick={startEdit}>@</button>
-            <button onClick={() => deleteToDo(toDo.id)}>X</button>
+          <div className="ToDo__list-button-wrapper">
+            <button onClick={startEdit}>
+              <Edit width={20} />
+            </button>
+            <button onClick={() => deleteToDo(toDo.id)}>
+              <Delete width={20} />
+            </button>
           </div>
         </li>
       )}
