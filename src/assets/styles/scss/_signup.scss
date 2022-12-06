@@ -36,7 +36,16 @@
   width: 200px;
   padding: 5px;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+
+.Signup__button--able {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: black;
+  color: white;
 }
 
 .Signup__button__wrapper {

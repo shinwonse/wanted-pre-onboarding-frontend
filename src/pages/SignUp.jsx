@@ -76,7 +76,9 @@ function SignUp() {
         </div>
         <div className="Signup__button__wrapper">
           <button
-            className="Signup__button"
+            className={`Signup__button${
+              emailError || passwordError ? '' : '--able'
+            }`}
             disabled={emailError || passwordError}
             onClick={signUp}
           >
